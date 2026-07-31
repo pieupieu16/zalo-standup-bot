@@ -10,7 +10,7 @@ từ tài khoản Zalo cá nhân thông qua Cookie & IMEI.
 import logging
 
 from zlapi import ZaloAPI
-from zlapi.models import Message, ThreadType
+from zlapi.models import Message, ThreadType, Mention
 
 from config import ZALO_PHONE, ZALO_IMEI, ZALO_COOKIES
 
@@ -37,7 +37,7 @@ class ZaloClient:
                 ZALO_PHONE,
                 "",  # password không cần khi dùng cookie
                 imei=ZALO_IMEI,
-                session_cookies=ZALO_COOKIES,
+                cookies=ZALO_COOKIES,
             )
             logger.info("✅ Kết nối Zalo thành công!")
 
@@ -45,7 +45,7 @@ class ZaloClient:
 
     def send_group_message(self, group_id: str, text: str) -> bool:
         """
-        Gửi tin nhắn text vào nhóm Zalo.
+        Gửi tin nhắn text vào nhóm Zalo (hỗ trợ tag @all).
 
         Args:
             group_id: ID của nhóm Zalo.
@@ -56,9 +56,16 @@ class ZaloClient:
         """
         try:
             client = self._get_client()
-            msg = Message(text=text)
+            
+            # Nếu tin nhắn có chứa @all ở đầu, tự động tạo Mention tag all
+            if text.startswith("@all"):
+                mention = Mention(uid="-1", offset=0, length=4)
+                msg = Message(text=text, mention=mention)
+            else:
+                msg = Message(text=text)
+
             client.send(msg, thread_id=group_id, thread_type=ThreadType.GROUP)
-            logger.info("✅ Đã gửi tin nhắn vào nhóm: %s", group_id[:15] + "...")
+            logger.info("✅ Đã gửi tin nhắn (kèm tag @all) vào nhóm: %s", group_id[:15] + "...")
             return True
 
         except Exception as e:

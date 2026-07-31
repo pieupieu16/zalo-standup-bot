@@ -52,7 +52,7 @@ TIMEZONE = os.getenv("TIMEZONE", "Asia/Ho_Chi_Minh")
 # ============================================================
 # NỘI DUNG TIN NHẮN
 # ============================================================
-STANDUP_MESSAGE = """⏰ DAILY STANDUP REMINDER ⏰
+STANDUP_MESSAGE = """@all ⏰ DAILY STANDUP REMINDER ⏰
 
 Chào cả team! Đã đến giờ Daily Standup hằng ngày!
 Mọi người vui lòng cập nhật nhanh 3 thông tin sau nhé:
