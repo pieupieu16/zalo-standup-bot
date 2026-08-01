@@ -46,7 +46,7 @@ ZALO_GROUP_ID = os.getenv("ZALO_GROUP_ID", "")
 # LỊCH GỬI TIN NHẮN
 # ============================================================
 STANDUP_HOUR = int(os.getenv("STANDUP_HOUR", "10"))
-STANDUP_MINUTE = int(os.getenv("STANDUP_MINUTE", "11"))
+STANDUP_MINUTE = int(os.getenv("STANDUP_MINUTE", "13"))
 TIMEZONE = os.getenv("TIMEZONE", "Asia/Ho_Chi_Minh")
 
 # ============================================================
