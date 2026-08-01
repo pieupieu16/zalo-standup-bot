@@ -1,6 +1,6 @@
 # 🤖 Zalo Daily Standup Bot (24/7 Free Hosting)
 
-Bot tự động gửi tin nhắn nhắc nhở **Daily Standup** vào nhóm Zalo mỗi buổi sáng (Thứ 2 → Thứ 6 lúc 9:00 AM).
+Bot tự động gửi tin nhắn nhắc nhở **Daily Standup** vào nhóm Zalo mỗi buổi sáng (Thứ 2 → Thứ 7 lúc 9:00 AM).
 
 Sử dụng **tài khoản Zalo cá nhân** (thông qua `zlapi`), tích hợp **Flask Web Server** để deploy 24/7 miễn phí lên **Render** kết hợp **UptimeRobot**.
 
@@ -47,7 +47,7 @@ zalo-standup-bot/
    git add .
    git commit -m "Zalo standup bot 24/7"
    git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/zalo-standup-bot.git
+   git remote add origin https://github.com/pieupieu16/zalo-standup-bot
    git push -u origin main
    ```
 
@@ -60,8 +60,11 @@ zalo-standup-bot/
 3. Nhấn vào extension để lấy `ZALO_COOKIES` và `ZALO_IMEI`.
 4. Lấy `ZALO_GROUP_ID` của nhóm Zalo bạn muốn gửi.
 
----
+zpw_sek=Q11b.461705189.a0.oPy2xHjM80oO8wLXN2mWUWOEHH5V5W8SI4X9FJ1yL1LF5LOJA6SB4Gj7GoWi4HrO02qMwrJ7dZpnBPow4KOWUW
 
+6e7bfc76-74f3-43a7-b852-c23fa949d459-c33c588009b95570bda142ca18d363d2
+---
+xp1z2fsgaxl51to2nden
 ### Bước 3: Triển khai Web Service trên Render (Free $0/tháng)
 
 1. Truy cập [render.com](https://render.com) và đăng nhập bằng GitHub.
@@ -80,8 +83,8 @@ zalo-standup-bot/
    - `ZALO_IMEI`: Chuỗi IMEI lấy ở Bước 2
    - `ZALO_COOKIES`: Chuỗi JSON Cookie lấy ở Bước 2 (VD: `{"zpw_sek":"..."}`)
    - `ZALO_GROUP_ID`: Group ID nhóm Zalo
-   - `STANDUP_HOUR`: `9`
-   - `STANDUP_MINUTE`: `0`
+   - `STANDUP_HOUR`: `10`
+   - `STANDUP_MINUTE`: `9`
    - `TIMEZONE`: `Asia/Ho_Chi_Minh`
 6. Nhấn **Create Web Service**. Render sẽ bắt đầu build và khởi động bot.
 7. Sau khi thành công, copy địa chỉ URL công khai do Render cấp (VD: `https://zalo-standup-bot-xxxx.onrender.com`).
