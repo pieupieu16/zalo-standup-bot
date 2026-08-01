@@ -124,6 +124,7 @@ def run_scheduler():
     schedule.every().wednesday.at(standup_time).do(send_standup_reminder)
     schedule.every().thursday.at(standup_time).do(send_standup_reminder)
     schedule.every().friday.at(standup_time).do(send_standup_reminder)
+    schedule.every().saturday.at(standup_time).do(send_standup_reminder)
 
     logger.info("✅ Scheduler đã sẵn sàng. Đang chờ đến giờ gửi...")
     logger.info("   Nhấn Ctrl+C để dừng bot.")
