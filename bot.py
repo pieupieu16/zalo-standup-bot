@@ -113,7 +113,7 @@ def run_scheduler():
     standup_time = f"{STANDUP_HOUR:02d}:{STANDUP_MINUTE:02d}"
 
     logger.info("⏰ Bot đã khởi động với scheduler!")
-    logger.info("📅 Lịch gửi: %s hàng ngày (Thứ 2 → Thứ 6)", standup_time)
+    logger.info("📅 Lịch gửi: %s hàng ngày (Thứ 2 → Thứ 7)", standup_time)
     logger.info("💬 Nhóm: %s", ZALO_GROUP_ID[:15] + "..." if ZALO_GROUP_ID else "⚠️ CHƯA CẤU HÌNH")
     logger.info("🌏 Timezone: %s", TIMEZONE)
     logger.info("-" * 50)
