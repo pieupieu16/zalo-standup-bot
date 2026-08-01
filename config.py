@@ -61,4 +61,6 @@ Mọi người vui lòng cập nhật nhanh 3 thông tin sau nhé:
 2. 🟡 Hôm nay bạn dự định làm gì?
 3. 🔴 Có blocker / khó khăn gì không?
 
+Link: https://docs.google.com/spreadsheets/d/1S4Fq_YWqTjDtjwiwcFBQ6yOwLTQylKiT/edit?usp=sharing&ouid=112255729083228214959&rtpof=true&sd=true
+
 Chúc cả team một ngày làm việc hiệu quả! 🚀"""
