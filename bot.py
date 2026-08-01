@@ -37,6 +37,13 @@ from config import (
 from zalo_client import ZaloClient
 
 # ============================================================
+# Cài đặt Timezone cho Linux (đặc biệt quan trọng trên Render)
+# ============================================================
+if hasattr(time, "tzset"):
+    os.environ["TZ"] = TIMEZONE
+    time.tzset()
+
+# ============================================================
 # Logging setup
 # ============================================================
 LOG_DIR.mkdir(parents=True, exist_ok=True)
